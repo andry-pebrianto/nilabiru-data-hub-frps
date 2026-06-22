@@ -2,7 +2,7 @@ services:
   nilabiru-portainer-agent:
     image: portainer/agent:latest
     container_name: nilabiru-portainer-agent
-    restart: always
+    restart: unless-stopped
     ports:
       - "9001:9001"
     volumes:
