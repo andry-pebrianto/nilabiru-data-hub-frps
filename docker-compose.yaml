@@ -1,6 +1,6 @@
 services:
   nilabiru-portainer-agent:
-    image: portainer/agent:latest
+    image: portainer/agent:2.42.0
     container_name: nilabiru-portainer-agent
     restart: unless-stopped
     ports:
