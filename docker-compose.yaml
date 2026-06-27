@@ -8,8 +8,6 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - /var/lib/docker/volumes:/var/lib/docker/volumes
-    networks:
-      - nilabiru-data-hub-frps
 
   nilabiru-frps:
     image: fatedier/frps:v0.69.1
@@ -27,9 +25,3 @@ services:
       - "7500:7500"
     volumes:
       - ./frps.toml:/etc/frp/frps.toml:ro
-    networks:
-      - nilabiru-data-hub-frps
-
-networks:
-  nilabiru-data-hub-frps:
-    driver: bridge
